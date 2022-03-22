@@ -1,3 +1,91 @@
-h1{
-    color: orangered;
+body{
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    margin: 0;
+    overflow: hidden;
 }
+.container{
+    width: 150vh;
+    height: 70vh;
+    background-color: darkslategrey;
+    padding: 15vh;
+}
+.allp{
+    height: 100vh;
+    width: 50vh;
+    background-color: rgb(56, 218, 247);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    
+}
+#mini_contain{
+    background-color: rgb(56, 218, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+}
+.notif{
+    margin-left:2vh ;
+    margin-right:2vh ;
+    width: 28vh;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vh;
+    border-bottom: 3px solid rgb(87, 87, 88);
+    border-right: 3px solid rgb(87, 87, 88);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color: white;
+}
+#success, .ResultatSuccess{
+    background-color: rgb(55, 131, 32);
+}
+#danger, .ResultatDanger{
+    background-color: rgb(190, 32, 4);
+}
+#warning, .ResultatWarning{
+    background-color: rgb(226, 201, 59);
+}
+#info, .ResultatInfo{
+    background-color: rgb(49, 165, 233);
+}
+.ResultatSuccess, .ResultatDanger, .ResultatWarning, .ResultatInfo{
+    width: 30vh;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2vh;
+    color: whitesmoke;
+    font-weight:bold;
+    vertical-align: text-bottom;
+}
+.ResultatSuccess, .ResultatDanger, .ResultatWarning, .ResultatInfo{
+    animation-duration: 10s ;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 1vh;
+      width: 50vh;
+    }
+    75% {
+      font-size: 4vh;
+      width: 50%;
+      opacity: 0.5;
+    }
+  
+    to {
+      
+      height: 0;
+      width: 0;
+      
+    }
+  }
