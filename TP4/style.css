@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -9,10 +10,11 @@ body{
     text-align: center;
     background-image: url(image8.jpg);
     background-size: cover;
-    font-family: "Yusel Magic", sans-serif;
+    
     color: #f4f7f7;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Oswald', sans-serif;
 }
 body::before{
     content: "";
@@ -34,9 +36,14 @@ body *{
     left: 50%;
     transform: translateX(-50%);
 }
+.foot{
+    margin-top: 5vh;
+    font-size: 7vh;
+}
 h1{
     font-size: 60px;
     margin: -60px 0 40px;
+    margin-top: 2vh;
 }
 .countdown{
     display: flex;
@@ -54,4 +61,19 @@ h1{
 }
 .time div{
     margin: 0 0 5px;
+    background-color: rgb(255, 255, 255);
+    width: 6vh;
+    height: 4vh;
+    color: rgb(1, 4, 17);
+    border-radius: 3px;
+}
+.unit{
+    width: 10vh;
+    height: 4vh;
+    color: rgb(1, 4, 17);
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

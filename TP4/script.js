@@ -1,16 +1,32 @@
-const days=document.getElementById("days");
-const heure=document.getElementById("heure");
-const minute=document.getElementById("minute");
-const seconde=document.getElementById("seconde");
-const days=document.getElementById("year");
-const days=document.getElementById("countdown");
+let body = document.getElementsByTagName("body");
+let title = document.getElementById("h1");
+let days=document.getElementById("days");
+let heure=document.getElementById("heure");
+let minute=document.getElementById("minute");
+let seconde=document.getElementById("seconde");
 
-const currentyear= new Date().getFullYear();
 
-const newYtime= new Date(`March 01 ${currentyear  + 1} 00:00:00`);
+function compteArebours(){
+    let nowYear= moment('2023','YYYY')
+    let now=moment();
+    let difference= nowYear - now ;
+    let nbJours=nowYear.diff(now,"day");
+    let duration=moment.duration(difference,'milliseconds')
+    
+    days.textContent = nbJours;
+    heure.textContent =  duration._data.hours;
+    minute.textContent = duration._data.minutes;
+    seconde.textContent = duration._data.seconds;
 
-function comptArebour (){
-    const currentTime= new Date();
-     diff = newYtime - currentTime;
+    if (difference <= 0) {
+          clearInterval(countDownInterval);
+        body.style.backgroundImage = 'url("newyear.jpg")';
+        days.textContent = 0;
+        heure.textContent = 0;
+        minute.textContent = 0;
+        seconde.textContent = 0;
+        title.innerHTML = "Bonne année !!!";
+    }
 }
-comptArebour();
+let countDownInterval = setInterval(compteArebours, 1000);
+compteArebours();

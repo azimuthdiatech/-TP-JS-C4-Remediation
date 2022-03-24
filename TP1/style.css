@@ -43,19 +43,19 @@ body{
     font-weight:bold;
     color: white;
 }
-#success, .ResultatSuccess{
+#success, .NotifSuccess{
     background-color: rgb(55, 131, 32);
 }
-#danger, .ResultatDanger{
+#danger, .NotifDanger{
     background-color: rgb(190, 32, 4);
 }
-#warning, .ResultatWarning{
+#warning, .NotifWarning{
     background-color: rgb(226, 201, 59);
 }
-#info, .ResultatInfo{
+#info, .NotifInfo{
     background-color: rgb(49, 165, 233);
 }
-.ResultatSuccess, .ResultatDanger, .ResultatWarning, .ResultatInfo{
+.NotifSuccess, .NotifDanger, .NotifWarning, .NotifInfo{
     width: 30vh;
     height: 8vh;
     display: flex;
@@ -66,7 +66,7 @@ body{
     font-weight:bold;
     vertical-align: text-bottom;
 }
-.ResultatSuccess, .ResultatDanger, .ResultatWarning, .ResultatInfo{
+.NotifSuccess, .NotifDanger, .NotifWarning, .NotifInfo{
     animation-duration: 10s ;
     animation-name: slidein;
   }
