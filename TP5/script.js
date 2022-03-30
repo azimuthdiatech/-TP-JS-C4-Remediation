@@ -4,12 +4,13 @@ const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 const SEARCHAPI ="https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
 const main = document.getElementById('main');
+const head = document.getElementById('header');
+const inputs = document.querySelector('input');
 const form = document.getElementById('form');
 const search =document.getElementById('search');
 var page=1;
 
-
-
+/*-----------------------------Récupérer les film------------------------------*/
 
 getMovies(APIURL);
 
@@ -20,9 +21,10 @@ function getMovies(url){
     //    console.log(data.results);
     })
 }
-function showMovies(data){
-    
 
+/*-----------------------------Afficher les film------------------------------*/
+
+function showMovies(data){
     data.forEach(movie => {
         const {title,overview,poster_path,vote_average}= movie;
         const movieE1 =document.createElement('div');
@@ -43,6 +45,8 @@ function showMovies(data){
     })
 }
 
+/*-------------------------------Couleur des votes--------------------------------*/
+
 function color(vote){
     if(vote>=8){
         return "green";
@@ -55,6 +59,9 @@ function color(vote){
     }
 
 }
+
+/*---------------------------Faire une recherche de film---------------------------*/
+
 search.onkeyup = (e) =>{
     e.preventDefault();
     const chercherFilm =search.value;
@@ -66,9 +73,9 @@ search.onkeyup = (e) =>{
     }
 }
 
+/*---------------charger les pages au fur et à mesure qu'on scroll------------------*/ 
 
 window.onscroll=function(){
-    
     if((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
         page++;
         getMovies(APIURL+page);
@@ -76,3 +83,21 @@ window.onscroll=function(){
     }   
 }
 
+/*-----------------------------------loader----------------------------------------*/
+
+if(document.readyState){
+    setTimeout(()=>{
+        const load= document.querySelector('.loader');
+        load.style.visibility = 'hidden';
+        main.style.visibility = 'visible';
+        }, 3000);
+    }else{
+        load.style.visibility = 'visible';
+        main.style.visibility = 'hidden';
+    }
+
+/*----------------------------------------------------------------------------------*/
+    function val(e){
+    head.textContent = e.target.value;
+}
+inputs.addEventListener("change", val);

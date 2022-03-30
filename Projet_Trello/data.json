@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "tache": "aller rendre visite à mon père",
+            "date": "28/03/2022",
+            "hdebut": "10:00",
+            "hfin": "12:00"
+        },
+        {
+            "tache": "aller à la plage",
+            "date": "29/03/2022",
+            "hdebut": "17:00",
+            "hfin": "18:00"
+        }
+    ]
+}

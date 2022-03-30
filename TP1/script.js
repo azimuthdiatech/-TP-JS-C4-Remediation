@@ -1,6 +1,7 @@
 const mesp=document.querySelector(".allp");
 var btn=document.querySelectorAll("button");
 const my_btn=document.querySelector(".notif");
+
 function notif(){
     const p=document.createElement("p");
     p.setAttribute("id", "mesp");
