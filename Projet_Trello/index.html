@@ -1,27 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projet_Trello</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"
+        integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
     <img src="menu.png" id="menu" alt="Menu">
+    
     <div class="header">
-        <button class="btn_add" id="newcol">+ Colonne</button><br>
-        <button class="btn_add" id="newnode">+ Note</button>
+        <button class="btn_add" id="newcol">+ Colonne</button><button id="btn_corbeille">Corbeille</button><br>
+        <button class="btn_add" id="newnode">+ Note</button><button id="btn_reset">Reset in Col 1</button>
     </div>
-
+    <div id="corbeille">
+        <h4>Colonne de restauration</h4>
+    </div>
     <div id="container">
         <div id="colonne"></div>
         <div id="modal_contain">
-            <form method="post" action="" id="my_form">
-                
+            <form method="post" action="" class="my_form" id="my_form" enctype="multipart/form-data">
+
             </form>
         </div>
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>
