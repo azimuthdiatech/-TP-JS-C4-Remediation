@@ -314,13 +314,13 @@ if(e.target == modal_contain){
 
 
 /*---------------------données json----------------------*/
-let url="http://localhost/TPJS_Remedia/Projet_Trello/data.json"
-function getData(url) {
- fetch(url)
-    .then(res=> res.json())
-    .then(data=> console.log(data))
-}
-getData(url);
+// let url="http://localhost/TPJS_Remedia/Projet_Trello/data.json"
+// function getData(url) {
+//  fetch(url)
+//     .then(res=> res.json())
+//     .then(data=> console.log(data))
+// }
+// getData(url);
 
 
 
